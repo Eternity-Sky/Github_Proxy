@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GitHub 代理</title>
+  <title>GitHub 代理加速</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
+  <link rel="icon" href="/favicon.jpg">
   <meta charset="UTF-8">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N8GEQD9CY"></script>
@@ -46,9 +48,9 @@
     </div>
 
     <div class="notice">
-      重要提示：公共服务，请勿滥用。加速源来自网络收集合，在此感谢每一位分享者。
+      重要提示：公共服务，请勿滥用。加速源来自网络收集合，在此感谢每一位分享者以及加速源的拥有者。
       <div id="userCount" style="margin-top: 10px;">
-        已有 <span id="visit-count">-</span> 名用户使用本工具
+        已有  <span id="visit-count">--</span> 名用户使用本工具。
       </div>
     </div>
 
@@ -85,16 +87,51 @@
             https://github.com/microsoft/vscode/archive/refs/tags/1.82.3.zip
           </a>
         </li>
+        <li>
+          <span class="label">分支文件：</span>
+          <a href="https://github.com/hydro-dev/Hydro/blob/master/README.md" class="example-link">
+            https://github.com/hydro-dev/Hydro/blob/master/README.md
+          </a>
+        </li>
+        <li>
+          <span class="label">分支源码：</span>
+          <a href="https://github.com/CB-X2-Jun/Github_Proxy/archive/main.zip" class="example-link">
+            https://github.com/CB-X2-Jun/Github_Proxy/archive/main.zip
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 
+  <div id="vssue" class="instructions"></div>
+  <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
+  <script>
+    new Vue({
+      el: '#vssue',
+
+      data: {
+        title: 'Vssue Dev',
+
+        options: {
+          owner: 'CB-X2-Jun',
+          repo: 'Github_Proxy',
+          clientId: 'Ov23liBmLpGDqiz84Wqv',
+          clientSecret: 'af556c87e8c53600dfce3137cf298e61955ed643', // 只有在使用某些平台时需要
+        },
+      },
+
+      template: `<vssue :title="title" :options="options"></vssue>`,
+    })
+  </script>
+
   <div class="footer">
     <div class="footer-content">
       <div class="copyright">
-        © 2024 Eternity-sky. All rights reserved.
+        <!-- © 2025 Eternity-Sky and CB_X2_Jun. All rights reserved. &emsp; -->
+        <a href="https://icp.gov.moe/?keyword=20255355" target="_blank">萌ICP备20255355号</a>
       </div>
-      <a href="https://github.com/Eternity-Sky/Github_Proxy" 
+      <a href="https://github.com/CB-X2-Jun/Github_Proxy" 
          class="github-link" 
          target="_blank">
         <span class="github-icon"></span>
@@ -108,20 +145,86 @@
     // 定义代理节点列表
     const proxyNodes = [
       'gitproxy.click',
+      'demo.52013120.xyz',
+      'github.whrstudio.top',
+      'free.cn.eu.org',
       'ghp.arslantu.xyz',
+      // 已受反馈停用 'api-gh.muran.eu.org',
       'ghproxy.imciel.com',
+      'slink.ltd',
+      'firewall.lxstd.org',
+      'github.moeyy.xyz',
+      'gh.noki.icu',
+      'gh.noki.eu.org',
+      'ghpxy.hwinzniej.top',
+      'ghf.无名氏.top',
+      'ghm.078465.xyz',
+      'gp.xylorase.ren',
+      'x.whereisdoge.work',
+      'y.whereisdoge.work',
+      'gh.veskarer.moe',
+      'github.tianrld.top',
+      'z.whereisdoge.work',
+      'gh-proxy.net',
+      'g.whereisdoge.work',
+      'gh.con.sh',
+      'ghp.alet15c.网址',
+      'cpcalendars.whereisdoge.work',
       'gh.monlor.com',
       'gitproxy.mrhjx.cn',
-      'blfrp.cn',
+      'ghproxy.org',
+      'g.blfrp.cn',
+      'gh.herronjay.me',
+      'github.chenc.dev',
+      'github.3x25.com',
+      'g.paulzheng888000.place',
+      'ghfile.geekertao.top',
+      'gp.voolwoolxyz.run',
+      'github.starrlzy.cn',
       'github.tmby.shop',
+      'g.brooidy555.la',
+      '43.132.131.30:9999',
+      'cf.ghproxy.cc',
+      'jiashu.1win.eu.org',
+      'j.1win.ggff.net',
+      'ghproxy.vansour.top',
+      'j.1lin.dpdns.org',
+      'gh-deno.mocn.top',
+      'ghfiles.geekertao.top',
+      'github.geekertao.top',
+      'git.yylx.win',
+      'gh.944446.xyz',
+      'tvv.tw',
+      '8.210.207.225:8888',
+      'github.kongkuang.top',
+      'github-proxy.kongkuang.icu',
+      'github.kkproxy.dpdns.org',
+      'gp-us.fyan.top',
+      'gitproxy.127731.xyz',
+      'github.iomi.team',
+      'ghproxy.cfd',
+      'gh.222322.xyz',
+      'github.acmsz.top',
+      'github.cmsz.dpdns.org',
+      'ghproxy.fangkuai.fun',
+      'github.alvertansio.sh',
       'gh.tryxd.cn',
       'moran233.xyz',
+      'gp.ea313ea3a1ebc41d49d7.app',
+      'gitdl.cn',
+      '12.do.lambterrp.cc',
       'fastgit.cc',
+      'github.abeeookk100.jp',
+      'github-proxy.zaqqolin.cx',
       'github.limoruirui.com',
+      'sciproxy.com',
       'gh.jasonzeng.dev',
+      'gh-proxy.shanghaimzq.ga',
       'git.speed-ssr.tech',
       'gh-proxy.com',
+      'cdn.gh-proxy.com',
       'gh.xx9527.cn',
+      'p.seeder23156.jp',
       'gh.zwy.me',
       'github.xxlab.tech',
       'gh.idayer.com',
@@ -129,24 +232,43 @@
       'ghp.miaostay.com',
       'ghpr.cc',
       'github.7boe.top',
+      'gh1.hub.px.blogofzhangyuchen.top',
       'gh.nxnow.top',
+      'ghproxy.monkeyray.net',
       'hub.gitmirror.com',
+      'git.hub.proxy.hakahappyzhu.blog',
       'gh.pylas.xyz',
+      'proxy.gitwarp.com',
+      'proxy.evenir1.网址',
+      'gh.ezctrl.cn',
+      'ghproxy.fangkuai.fun',
       'gh-proxy.ygxz.in',
       'gh.llkk.cc',
       'gh.chaoyi996.com',
+      'mirror.ghproxy.com',
+      'a.a-gitp.ghpxyyyyyyyyy.co.uk',
+      'gitproxy1.127731.xyz',
+      '720091.ghproxy-000.dating',
+      'ghproxy.twyccdar.ml',
       'ghp.ci',
+      'gh.bink.cc',
       'githubapi.jjchizha.com',
+      'www.zyzzjfk.accountant',
       'gh-proxy.llyke.com',
       'ql.133.info',
       'ghproxy.cn',
       'gh.6yit.com',
       'ghp.keleyaa.com',
+      'gh.jarzailomim.com.cn',
       'ghproxy.net',
+      'ghproxy.whereisdoge.work',
+      'gh.chjina.com',
       'ghproxy.xiaopa.cc',
       'gh.xxooo.cf',
       'ghproxy.cc',
       'gh.catmak.name',
+      'whereisdoge.work',
+      'www.whereisdoge.work',
       'git.669966.xyz',
       'gh.api.99988866.xyz',
       'gh.sixyin.com',
@@ -155,15 +277,49 @@
       'ghproxy.cnproxy.top',
       'git.40609891.xyz',
       'github.ednovas.xyz',
+      'mtp.whereisdoge.work',
       'ghp.ml1.one',
       'gp.zkitefly.eu.org',
+      'ghp.whereisdoge.work',
       'git.886.be',
       'ghp.p3terx.com',
       'gh.qninq.cn',
+      'github代理.whereisdoge.work',
+      '代理.whereisdoge.work',
       'cccccccccccccccccccccccccccccccccccccccccccccccccccc.cc',
+      'gh.ddlc.top',
+      'gh-proxy.linioi.com',
+      'cpcontacts.whereisdoge.work',
+      'github.tbedu.top',
+      'gp.whereisdoge.work',
       'ghproxy.cianogame.top',
+      'ghproxy.cxkpro.top',
+      'gh.zwnes.xyz',
       'ghproxy.1888866.xyz',
-      'mirror.ghproxy.com'
+      'p.whereisdoge.work',
+      'gh.whereisdoge.work',
+      'gp.2425216531jyy.us.kg',
+      'cdn.akaere.online',
+      'ghproxy.friendsa.onflashdrive.app',
+      'gh.mott2525.gq',
+      'fastgh.zhaowxuan.tk',
+      'www.ten-year.link',
+      'ghproxy.tycoonarts.xyz',
+      'git.ppp.ac.cn',
+      'github-proxy.lixxing.top',
+      'github.proxy.class3.fun',
+      'webdisk.whereisdoge.work',
+      'www.imengying.eu.org',
+      'goppx.com',
+      'ghproxy.bravemail666.eu.org',
+      'ghp.grlzqim.shop',
+      'g.cachecdn.ggff.net',
+      'github.akams.cn',
+      'github.dpik.top',
+      'ghproxy.top',
+      'gh.jiasu.in',
+      '152.70.36.140:88',
+      'ghproxy.homeboyc.cn'
     ];
 
     // 初始化下拉框选项
